@@ -24,10 +24,13 @@ json2csv < input.json > output.csv
 #### Example
 ```bash
 echo '[{"name":"Alice","age":30},{"name":"Bob","age":25}]' | json2csv
-# Output:
-# name,age
-# Alice,30
-# Bob,25
+```
+
+Output:
+```csv
+name,age
+Alice,30
+Bob,25
 ```
 
 ### csv2json
@@ -48,8 +51,11 @@ csv2json < input.csv > output.json
 #### Example
 ```bash
 echo -e "name,age\nAlice,30\nBob,25" | csv2json
-# Output:
-# [{"name":"Alice","age":"30"},{"name":"Bob","age":"25"}]
+```
+
+Output:
+```json
+[{"name":"Alice","age":"30"},{"name":"Bob","age":"25"}]
 ```
 
 ## oneline
@@ -70,7 +76,11 @@ oneline < input.txt
 ### Example
 ```bash
 echo -e "This is\na multi-line\ntext" | oneline
-# Output: This is a multi-line text
+```
+
+Output:
+```text
+This is a multi-line text
 ```
 
 ## sqltable2csv
@@ -89,20 +99,27 @@ sqltable2csv < sql_output.txt > output.csv
 - Converts to clean CSV format
 
 ### Example
-```bash
-# Input (SQL table format):
-# +------+-----+
-# | name | age |
-# +------+-----+
-# | Alice| 30  |
-# | Bob  | 25  |
-# +------+-----+
 
+Input (SQL table format):
+```text
++------+-----+
+| name | age |
++------+-----+
+| Alice| 30  |
+| Bob  | 25  |
++------+-----+
+```
+
+Command:
+```bash
 cat sql_output.txt | sqltable2csv
-# Output:
-# name,age
-# Alice,30
-# Bob,25
+```
+
+Output:
+```csv
+name,age
+Alice,30
+Bob,25
 ```
 
 ## Installation
