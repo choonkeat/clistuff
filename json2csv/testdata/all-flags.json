@@ -1,0 +1,5 @@
+[
+  {"time":"2024-01-01","requestID":"req1","method":"GET","url":"example.com/api","path":"/api","status":200},
+  {"time":"2024-01-02","requestID":"req2","method":"POST","path":"/users","status":201,"responseTime":150},
+  {"time":"2024-01-03","requestID":"req3","method":"PUT","url":"","path":"/update","extra":"data","status":204}
+]

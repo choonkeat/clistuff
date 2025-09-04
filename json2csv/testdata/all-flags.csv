@@ -1,0 +1,4 @@
+time,requestID,method,url,status,extra,responseTime
+2024-01-01,req1,GET,example.com/api,200,,
+2024-01-02,req2,POST,/users,201,,150
+2024-01-03,req3,PUT,/update,204,data,
