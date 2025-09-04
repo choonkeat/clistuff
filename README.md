@@ -13,6 +13,9 @@ Converts JSON data to CSV format.
 #### Usage
 ```bash
 json2csv < input.json > output.csv
+
+# or directly from your macOS clipboard
+pbpaste | json2csv > output.csv
 ```
 
 #### Features
@@ -40,6 +43,9 @@ Converts CSV data to JSON format.
 #### Usage
 ```bash
 csv2json < input.csv > output.json
+
+# or directly from your macOS clipboard
+pbpaste | csv2json > output.json
 ```
 
 #### Features
@@ -65,6 +71,9 @@ Converts multi-line input into a single line format.
 ### Usage
 ```bash
 oneline < input.txt
+
+# or directly from your macOS clipboard
+pbpaste | oneline
 ```
 
 ### Features
@@ -72,6 +81,7 @@ oneline < input.txt
 - Useful for log processing and text manipulation
 - Preserves spacing between words
 - Reads from stdin and outputs to stdout
+- Particularly useful with `jq` when copying from terminals that wrap long single-line JSON
 
 ### Example
 ```bash
@@ -83,6 +93,12 @@ Output:
 This is a multi-line text
 ```
 
+Common use case with `jq`:
+```bash
+# When terminal-wrapped JSON is copied to clipboard
+pbpaste | oneline | jq '.'
+```
+
 ## sqltable2csv
 
 Converts SQL table output to CSV format.
@@ -90,6 +106,9 @@ Converts SQL table output to CSV format.
 ### Usage
 ```bash
 sqltable2csv < sql_output.txt > output.csv
+
+# or directly from your macOS clipboard
+pbpaste | sqltable2csv > output.csv
 ```
 
 ### Features
